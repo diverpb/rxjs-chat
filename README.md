@@ -1,6 +1,6 @@
-# monorepo-template
+# rxjs-chat
 
-Monorepository typescript template for react/express application
+Chat implementation on rxjs
 
 # usage
 

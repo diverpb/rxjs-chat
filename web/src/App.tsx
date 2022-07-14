@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Config } from "@monorepo/common";
+import { Config } from "@rxjs-chat/common";
 
 export function App() {
   const [result, setResult] = useState("loading");
