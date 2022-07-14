@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { Config } from "@rxjs-chat/common";
+import React from "react";
+import { MessageList } from "./components/MessageList";
+import { UserList } from "./components/UserList";
+import { InputForm } from "./components/InputForm";
+import './App.css';
 
 export function App() {
-  const [result, setResult] = useState("loading");
-
-  useEffect(() => {
-    fetch(Config.host + Config.api)
-      .then((r) => r.json())
-      .then(({ message }) => message)
-      .then(setResult);
-  }, []);
-
   return (
-    <div>
-      <div> Hello react! </div> 
-      <div> environment: {Config.environment}</div> 
-      <div> server answer: {result}</div>
+    <div className="App">
+      <div className="App__messages">
+        <MessageList/>
+      </div>
+      <div className="App__users">
+        <UserList />
+      </div>
+      <div className="App__input-form">
+        <InputForm />
+      </div>
     </div>
   );
 }

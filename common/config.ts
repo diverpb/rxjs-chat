@@ -8,11 +8,15 @@ export namespace Config {
   export const isDev = environment === Env.development;
   export const isProd = environment === Env.production;
 
-  export const domain = isDev ? "http://localhost" : "http://localhost";
+  export const domain = isDev ? "localhost" : process.env.NODE_HOST_DOMAIN;
 
   export const port = isDev ? 4000 : 80;
 
   export const host = `${domain}:${port}`;
 
-  export const api = `/api`;
+  export const api = '/api';
+
+  export const log = '/log';
+
+  export const ws = '/ws';
 }

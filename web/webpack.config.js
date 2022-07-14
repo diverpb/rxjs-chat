@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: __dirname + '/dist/',
   },
+  stats: 'errors-only',
   module: {
     rules: [
       {
